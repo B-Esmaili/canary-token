@@ -10,7 +10,7 @@ services:
   frontend:
     restart: always
     image: thinkst/canarytokens:v2_latest
-    build: ./canarytokens
+    #build: ./canarytokens
     links:
      - redis
     env_file:
@@ -23,7 +23,7 @@ services:
   switchboard:
     restart: always
     image: thinkst/canarytokens:v2_latest
-    build: ./canarytokens
+#    build: ./canarytokens
     ports:
      - "53:53"
      - "53:53/udp"
@@ -42,7 +42,7 @@ services:
   nginx:
     restart: always
     image: thinkst/canarytokens_nginx
-    build: ./nginx
+    #build: ./nginx
     ports:
      - "80:80"
     links:
